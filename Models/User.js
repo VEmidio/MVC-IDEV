@@ -1,4 +1,4 @@
-
+const dbUsers = require('../config/database');
 
 class Users {
 
@@ -50,7 +50,9 @@ class Users {
     }
 
     salvar(user) {
-
+        if(dbUsers.length > 0) {
+            
+        }
     }
 
 
