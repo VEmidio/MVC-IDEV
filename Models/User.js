@@ -3,10 +3,10 @@ const dbUsers = require('../config/database');
 class Users {
 
     constructor() {
-        this._id = id;
-        this._email = email;
-        this._password = password;
-        this._nome = nome;
+        this._id = Number();
+        this._email = String();
+        this._password = String();
+        this._nome = String();
     }
 
     get id() {
@@ -25,11 +25,11 @@ class Users {
         return this._nome;
     }
 
-    set id(id) {
-        if (id.typeof === 'string') {
+    set id(value) {
+        if (value.typeof === 'string') {
             console.log("Id precisa ser número");
         } else {
-            this._id = id;
+            this._id = value;
         }
 
     }
@@ -56,6 +56,8 @@ class Users {
             user.id = 1;
         }
         dbUsers.push(user);
+
+        console.table(dbUsers);
 
     }
 
