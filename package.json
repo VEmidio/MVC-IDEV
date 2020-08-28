@@ -1,0 +1,19 @@
+{
+  "name": "mvc",
+  "version": "0.0.1",
+  "description": "desafio em grupo mvc",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VEmidio/MVC-IDEV.git"
+  },
+  "author": "Idev - community",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VEmidio/MVC-IDEV/issues"
+  },
+  "homepage": "https://github.com/VEmidio/MVC-IDEV#readme"
+}
