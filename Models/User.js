@@ -26,20 +26,20 @@ class Users {
     }
 
     set id(id) {
-      if(id.typeof === 'string'){
-        console.log("Id precisa ser número");
-      }else {
-        this._id = id;
-      }
-        
+        if (id.typeof === 'string') {
+            console.log("Id precisa ser número");
+        } else {
+            this._id = id;
+        }
+
     }
 
     set email(email) {
-      if(email.includes("@")){
-        this._email = email;
-      }else{
-        console.log("Email inválido");
-      } 
+        if (email.includes("@")) {
+            this._email = email;
+        } else {
+            console.log("Email inválido");
+        }
     }
 
     set password(password) {
@@ -50,9 +50,13 @@ class Users {
     }
 
     salvar(user) {
-        if(dbUsers.length > 0) {
-            
+        if (dbUsers.length > 0) {
+            user.id = dbUsers[dbUsers.length - 1].id + 1;
+        } else {
+            user.id = 1;
         }
+        dbUsers.push(user);
+
     }
 
 
