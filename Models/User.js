@@ -1,3 +1,5 @@
+
+
 class Users {
 
     constructor() {
@@ -12,29 +14,43 @@ class Users {
     }
 
     get email() {
-        return this._email
+        return this._email;
     }
 
     get password() {
-        return this._password
+        return this._password;
     }
 
     get nome() {
-        return this._nome
+        return this._nome;
     }
 
     set id(id) {
-        this._id = id
+      if(id.typeof === 'string'){
+        console.log("Id precisa ser número");
+      }else {
+        this._id = id;
+      }
+        
     }
 
     set email(email) {
-        this._email = email
+      if(email.includes("@")){
+        this._email = email;
+      }else{
+        console.log("Email inválido");
+      } 
     }
+
     set password(password) {
         this._password = password;
     }
     set nome(nome) {
         this._nome = nome;
+    }
+
+    salvar(user) {
+
     }
 
 
