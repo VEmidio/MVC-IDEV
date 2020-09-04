@@ -7,6 +7,7 @@ class Users {
         this._email = String();
         this._password = String();
         this._nome = String();
+        this.generateId();
     }
 
     get id() {
@@ -49,16 +50,28 @@ class Users {
         this._nome = nome;
     }
 
-    salvar(user) {
+    generateId() {
         if (dbUsers.length > 0) {
-            user.id = dbUsers[dbUsers.length - 1].id + 1;
+            this._id = dbUsers[dbUsers.length - 1].id + 1;
         } else {
-            user.id = 1;
+            this._id = 1;
         }
+    }
+
+    falar(frase) {
+        console.log(frase);
+    }
+
+    andar(velocidade) {
+        console.log("Caminhando... " + velocidade);
+    }
+
+    static salvar(user) {
         dbUsers.push(user);
+    }
 
+    static findAll() {
         console.table(dbUsers);
-
     }
 
 

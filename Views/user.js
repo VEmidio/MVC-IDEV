@@ -1,4 +1,5 @@
-const usercontroller = require('../Controllers/userController');
+const userController = require('../Controllers/userController');
 
 
-usercontroller.salvar("daniele", "daniele@hotmail.com", 123456);
+userController.salvar("daniele", "daniele@hotmail.com", 123456);
+userController.listar();

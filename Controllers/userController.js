@@ -8,8 +8,15 @@ module.exports = {
     user.email = email;
     user.password = password;
 
-    user.salvar(user);
+    User.salvar(user);
 
+  },
+
+  listar: function () {
+    const usuario = new User();
+    User.findAll();
+    usuario.falar("Olá, mundo");
+    usuario.andar(" 10 passos");
   }
   
 };
