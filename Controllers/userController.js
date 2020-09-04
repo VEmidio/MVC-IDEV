@@ -2,14 +2,17 @@ const User = require('../Models/User');
 
 module.exports = {
   salvar: function (nome, email, password){
-    let user = new User();
+    try {
+      let user = new User();
 
-    user.nome = nome;
-    user.email = email;
-    user.password = password;
-
-    User.salvar(user);
-
+      user.nome = nome;
+      user.email = email;
+      user.password = password;
+  
+      User.salvar(user);
+    } catch (error) {
+      return error.message;
+    }
   },
 
   listar: function () {

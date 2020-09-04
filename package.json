@@ -4,7 +4,10 @@
   "description": "desafio em grupo mvc",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-tr":"jest --watch",
+    "user":"node Views/user.js",
+    "test-realt":"jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/VEmidio/MVC-IDEV/issues"
   },
-  "homepage": "https://github.com/VEmidio/MVC-IDEV#readme"
+  "homepage": "https://github.com/VEmidio/MVC-IDEV#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
 }

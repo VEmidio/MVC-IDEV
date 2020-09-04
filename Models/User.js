@@ -32,21 +32,26 @@ class Users {
         } else {
             this._id = value;
         }
-
     }
 
     set email(email) {
         if (email.includes("@")) {
             this._email = email;
         } else {
-            console.log("Email inválido");
+            throw new Error("Informe um email válido");
         }
     }
 
     set password(password) {
+        if (password === '') {
+            throw new Error("Informe uma senha válida");  
+        }
         this._password = password;
     }
     set nome(nome) {
+        if (nome === '') {
+            throw new Error("Informe um nome"); 
+        }
         this._nome = nome;
     }
 
